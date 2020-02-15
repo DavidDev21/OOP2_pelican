@@ -75,6 +75,7 @@
   }
   figure.logo {
       margin: 0em 0em 0em 0em;
+      display: flex;
       background-color: var(--light-bg-color);
   }
   
