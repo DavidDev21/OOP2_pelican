@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>
+    Object-Oriented
+    <br>
+    Programming in C++
+</h1>
+
+<p class="leadquote">
+    "Programming is understanding." -- Kristen Nygaard
+</p>
+
+<hr>
+
+<p>
+    This website is a collection of aids to teaching 
+    object-oriented programming in the C++ programming language.
+</p>
+
+<div>
+    <h2 class="toc-head">
+    Course Topics
+    </h2>
+
+    <!-- List of "articles" -->
+    <ol>
+        {% if articles %}
+            {% for article in articles %}
+                <li><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></li>
+            {% endfor %}
+        {% else %}
+            <p>No articles listed</p>
+        {% endif %}
+    </ol>
+
+    <hr>
+
+    <p>
+        Much of the above material has been drawn from Professor 
+        John Sterling's
+        <a href="http://cis.poly.edu/jsterling/cs2124/Notes/Syllabus.html">
+        lecture notes</a>.
+    </p>
+</div>
+
+{% endblock content %}

@@ -1,2 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>OOP2_pelican - misc</title><link href="https://daviddev21.github.io/OOP2_pelican/" rel="alternate"></link><link href="https://daviddev21.github.io/OOP2_pelican/feeds/misc.atom.xml" rel="self"></link><id>https://daviddev21.github.io/OOP2_pelican/</id><updated>2020-02-13T00:00:00+00:00</updated><entry><title>Hello Test</title><link href="https://daviddev21.github.io/OOP2_pelican/hello-test.html" rel="alternate"></link><published>2020-02-13T00:00:00+00:00</published><updated>2020-02-13T00:00:00+00:00</updated><author><name>David Z</name></author><id>tag:daviddev21.github.io,2020-02-13:/OOP2_pelican/hello-test.html</id><content type="html">&lt;p&gt;THIS&lt;/p&gt;</content><category term="misc"></category></entry></feed>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>OOP2_pelican - misc</title><link href="https://daviddev21.github.io/OOP2_pelican/" rel="alternate"></link><link href="https://daviddev21.github.io/OOP2_pelican/feeds/misc.atom.xml" rel="self"></link><id>https://daviddev21.github.io/OOP2_pelican/</id><updated>2020-02-14T00:00:00+00:00</updated><entry><title>Why bother studying a "hard" language like C++?</title><link href="https://daviddev21.github.io/OOP2_pelican/why.html" rel="alternate"></link><published>2020-02-14T00:00:00+00:00</published><updated>2020-02-14T00:00:00+00:00</updated><author><name>David Z</name></author><id>tag:daviddev21.github.io,2020-02-14:/OOP2_pelican/why.html</id><summary type="html">&lt;p&gt;Article for why study C++&lt;/p&gt;</summary><content type="html">&lt;!-- ^^^ This is a custom metadata used to force pelican to order the articles in a certan way --&gt;
+
+&lt;!-- Must be indicated within the config files. *conf.py --&gt;
+
+&lt;!-- Start of article content --&gt;
+
+&lt;h1&gt;Why Study C++?&lt;/h1&gt;
+&lt;!-- Rendered with &lt;p&gt; --&gt;
+
+&lt;p&gt;Given how much easier things are likely to seem to you in a language
+like Python, why should we bother learning a "hard" language like C++?
+Here are some reasons:&lt;/p&gt;
+&lt;!-- Rendered as &lt;ul&gt; and &lt;li&gt; --&gt;
+
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;"Easy" languages like Python are usually implemented in 
+    "harder" languages like C++. (The main Python implementation
+    is &lt;a href="https://en.wikipedia.org/wiki/CPython"&gt;CPython&lt;/a&gt;,
+    written in C.) Thus, to fully understand the easy languages,
+    one must undersand the hard languages!&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;A language like C++ also has many practical applications:
+    it is dominant in the game industry, where performance is
+    crucial, and is used extensively in embedded systems
+    (such as the &lt;a href="https://youtu.be/3SdSKZFoUa8"&gt;Mars Rover&lt;/a&gt;), and in the finance industry, in real-time
+    trading software.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Studying C++ aids in grasping many fundamental programming
+    concepts, such as memory allocation, pass-by-value versus
+    pass-by-reference, pointers, and how types are actually
+    implemented.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;C++ is a compiled language. Seperating the compile time from the run time would help you catch many errors at the compile time, so the program is less likely to crash while running. Moreover, the compiler translates the C++ code to the machine code. It tells the machine what function to call. The machine thus do not need to sacrifice the performance to figure out what function to run at the runtime. C++ also enforces the static typing. It helps you catch type mismatches sooner at comile time.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;No memory management: Unlike Java and Python, C++ does not have the garabage collector. To allocate memory on the heap, you as the programmer has to take the responsibility to delete yourself. It gives your control over the memory management system. So your program does not sacrifice the performance. However, it also comes with a price. You would possibly run into memory leak. C++ is like driving a car with a manual transimission. If you just drive a normal car, you might think it is difficult to control the car. But if you are a race car driver, you probably want it to be manual to have more control over the car to maximize the performance. &lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</content><category term="misc"></category></entry><entry><title>The Basics of C++</title><link href="https://daviddev21.github.io/OOP2_pelican/basic.html" rel="alternate"></link><published>2020-02-14T00:00:00+00:00</published><updated>2020-02-14T00:00:00+00:00</updated><author><name>David Z</name></author><id>tag:daviddev21.github.io,2020-02-14:/OOP2_pelican/basic.html</id><summary type="html">&lt;p&gt;Article for the basics of C++&lt;/p&gt;</summary><content type="html">&lt;!-- Content --&gt;
+
+&lt;h1&gt;The Basics of C++&lt;/h1&gt;
+&lt;p&gt;In this unit we will discuss the most basic features of C++, those we
+need to use to write any sort of interesting program.&lt;/p&gt;
+&lt;p&gt;But before we write &lt;em&gt;interesting&lt;/em&gt; programs, we have to be able to
+write, compile, and run &lt;em&gt;any program at all&lt;/em&gt;.
+(&lt;em&gt;Compiling&lt;/em&gt; a program is turning human-readable source code into
+runnable machine code. A language like Python does this when you run
+the Python source code: it compiles and runs in one step, which is
+characteristic of &lt;em&gt;interpreted languages&lt;/em&gt;. C++ divides this into
+two separate steps, which is more laborious, but which also makes the
+resulting program run significantly faster.)
+And that can involve
+a fair bit of setup and installation work. So the very first thing you
+should do, with whatever C++ development tool you use, is to try to
+compile and run &lt;a href="hello.html"&gt;Hello World!&lt;/a&gt;, the standard
+first program to try in any language.&lt;/p&gt;
+&lt;p&gt;Once you have gotten "Hello World!" to run, you next need to master
+these C++ basics:&lt;/p&gt;
+&lt;!-- This is an internal link to the markdown of glossary, {filename} tells pelican that this is internal --&gt;
+
+&lt;!-- "/" is the content folder --&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://daviddev21.github.io/OOP2_pelican/pages/glossary.html#statictyping"&gt;Static typing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Conditions&lt;/li&gt;
+&lt;li&gt;Loops&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://daviddev21.github.io/OOP2_pelican/pages/glossary.html#function"&gt;Functions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://daviddev21.github.io/OOP2_pelican/pages/glossary.html#struct"&gt;Structs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://daviddev21.github.io/OOP2_pelican/pages/glossary.html#string"&gt;Strings&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://daviddev21.github.io/OOP2_pelican/pages/glossary.html#vector"&gt;Vectors&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Logical operators: &lt;span class="code"&gt;&amp;amp;&amp;amp;&lt;/span&gt; (and), &lt;span class="code"&gt;||&lt;/span&gt; (or), and &lt;span class="code"&gt;!&lt;/span&gt; (not).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Here are some code examples to help you:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="funcs.html"&gt;Calling functions in C++&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href="mean.html"&gt;Some vector basics&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href="point.html"&gt;A simple structure and its use&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="misc"></category></entry><entry><title>Hello Test</title><link href="https://daviddev21.github.io/OOP2_pelican/hello-test.html" rel="alternate"></link><published>2020-02-14T00:00:00+00:00</published><updated>2020-02-14T00:00:00+00:00</updated><author><name>David Z</name></author><id>tag:daviddev21.github.io,2020-02-14:/OOP2_pelican/hello-test.html</id><content type="html">&lt;p&gt;THIS&lt;/p&gt;</content><category term="misc"></category></entry></feed>

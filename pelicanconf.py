@@ -7,10 +7,19 @@ SITENAME = u'OOP2_pelican'
 SITEURL = ''
 
 PATH = 'content'
-
+THEME="themes/OOP2_theme"
 TIMEZONE = 'UTC'
 
+# Enforce article ordering
+ARTICLE_ORDER_BY = 'article_num'
+
 DEFAULT_LANG = u'en'
+
+# Static_path starts from the "content" folder
+# This is to tell pelican where the static content folder is and dont do processing on it
+# Adds straight to the root of the site or the path relative to the root given by 'path'
+STATIC_PATHS= ['extra']
+EXTRA_PATH_METADATA = {'extra/favicon.ico': {'path': 'favicon.ico'}}
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
