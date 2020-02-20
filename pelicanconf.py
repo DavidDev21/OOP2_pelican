@@ -19,6 +19,7 @@ DEFAULT_LANG = u'en'
 # This is to tell pelican where the static content folder is and dont do processing on it
 # Adds straight to the root of the site or the path relative to the root given by 'path'
 STATIC_PATHS= ['extra']
+# path: I am assuming this is where the file would go in the output dir
 EXTRA_PATH_METADATA = {'extra/favicon.ico': {'path': 'favicon.ico'}}
 
 # Feed generation is usually not desired when developing
